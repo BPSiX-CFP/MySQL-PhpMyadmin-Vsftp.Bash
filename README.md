@@ -7,5 +7,4 @@ Primer de tot descarreguem l'arxiu .sh amb la següent comanda i donem permisos 
 git clone https://github.com/BPSiX-CFP/MySQL-PhpMyadmin-Vsftp.Bash.git
 ----------------------------------------
 sudo chmod +x Mysql-PhpmyadminInstall.sh
-
 ```

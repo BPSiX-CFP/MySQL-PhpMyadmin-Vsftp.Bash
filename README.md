@@ -14,3 +14,5 @@ cd MySQL-PhpMyadmin-Vsftp.Bash
 sudo chmod +x Mysql-PhpmyadminInstall.sh
 ----------------------------------------
 ```
+
+@DonBosco :+1: This Script looks great - it's ready to merge! :shipit:

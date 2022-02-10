@@ -13,11 +13,11 @@ clear
 if [ $a = 1 ]
 then
 	sudo systemctl status mysql
-	clear
 	if [ $? -eq 4 ]
 	then
+		clear
 		echo "No esta Instal·lat MySQL"
-		read -p "Clica [Enter] per actualitzar el sistema & instal·lar MySQL"
+		read -p "Clica [Enter] per actualitzar el sistema & instal·lar MySQL !Aquest pas pot tarda una Mica¡"
 
 		sudo apt-get update -y
 		sudo apt-get install mysql-server
@@ -27,9 +27,9 @@ then
 		clear
 		./Mysql-PhpmyadminInstall.sh
 	else
-
+		clear
 		echo "MySQL ja esta instal·lat al sistema"
-		read -p  "Clica [Enter] per torna al Menu"
+		read -p "Clica [Enter] per torna al Menu"
 		clear
 		./Mysql-PhpmyadminInstall.sh
 	fi
@@ -37,10 +37,18 @@ then
 elif [ $a = 2 ]
 then
 
-	sudo systemctl status apache2
-	clear
-	if [ $? -eq 4 ]
+	Ruta=/etc/apache2
+
+	if [ -d $Ruta ]
 	then
+
+		echo "Apache2 ja esta instal·lat al sistema"
+		read -p "Clica [Enter] per torna al Menu"
+		clear
+		./Mysql-PhpmyadminInstall.sh
+
+	else
+		clear
 		echo "No esta Instal·lat Apache!"
 		read -p "Clica [Enter] per actualitzar el sistema & instal·lar Apache2"
 
@@ -49,9 +57,6 @@ then
 		clear
 
 		echo "Apache2 instal·lat!"
-		read -p "Clica "
-	else
-		echo "Apache2 ja esta instal·lat al sistema"
 		read -p "Clica [Enter] per torna al Menu"
 		clear
 		./Mysql-PhpmyadminInstall.sh
@@ -75,11 +80,12 @@ then
 		read -p "Clica [Enter] per actualitzar el sistema & instal·lar Phpmyadmin"
 
 		sudo apt-get update -y
-		sudo apt-get php -y
-		sudo apt-get phpmyadmin -y
+		sudo apt-get install php -y 
+		sudo apt-get install phpmyadmin -y
+
 		clear
 
-		echo "Phpmmyadmin ja esta Instal·lat al sistema"
+		echo "Phpmyadmin ja esta Instal·lat al sistema"
 		read -p "Clica [Enter] per torna al Menu"
 		clear
 		./Mysql-PhpmyadminInstall.sh
@@ -89,15 +95,15 @@ then
 elif [ $a = 4 ]
 then
 
-	sudo systemctl status vsftp.service
-	clear
+	sudo systemctl status vsftpd.service
 	if [ $? -eq 4 ]
 	then
+		clear
 		echo "Vsftp no es Instal·lat al sistema"
 		read -p "Clica [Enter] per actualitzar el sistema & instal·lar Vsftp"
 
 		sudo apt-get update -y
-		sudo apt-get vsftp -y
+		sudo apt-get install vsftpd -y
 		clear
 
 		echo "Vsftp ja esta Instal·latal sistema"
@@ -105,7 +111,7 @@ then
 		clear
 		./Mysql-PhpmyadminInstall.sh
 	else
-
+		clear
 		echo "Vsftp ja esta Instal·lat al sistema!!!"
 		read -p "Clica [Enter] per torna al Menu"
 		clear
@@ -116,15 +122,16 @@ elif [ $a = 5 ]
 then
 
 	sudo systemctl status mysql
-	clear
 	if [ $? -eq 4 ]
 	then
+		clear
 		echo "No esta instal·lat MySQL!"
 		read -p "Clica [Enter] per torna al Menu"
 		clear
 		./Mysql-PhpmyadminInstall.sh
 
 	else
+		clear
 		echo -e "Escriu el nom del usuari sisplau"
 		read nom
 

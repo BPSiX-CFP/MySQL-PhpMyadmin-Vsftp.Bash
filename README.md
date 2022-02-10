@@ -4,7 +4,7 @@ Bash per poder instal·lar d'una forma més còmoda MySQL, PhpMyadmin i Vsftp a 
 ## Com Utilitzar
 Primer de tot descarreguem el arxiu .sh amb la següent comanda i donem permisos d'execució:
 ```
-git clone 
+git clone https://github.com/BPSiX-CFP/MySQL-PhpMyadmin-Vsftp.Bash.git
 ----------------------------------------
 sudo chmod +x Mysql-PhpmyadminInstall.sh
 

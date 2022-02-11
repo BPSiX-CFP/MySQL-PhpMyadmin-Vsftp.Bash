@@ -12,9 +12,16 @@ clear
 
 if [ $a = 1 ]
 then
-	sudo systemctl status mysql
-	if [ $? -eq 4 ]
+	Ruta=/etc/mysql
+	
+	if [ -d $Ruta ]
 	then
+		clear
+		echo "MySQL ja esta instal·lat al sistema"
+		read -p "Clica [Enter] per torna al Menu"
+		clear
+		./Mysql-PhpmyadminInstall.sh
+	else 
 		clear
 		echo "No esta Instal·lat MySQL"
 		read -p "Clica [Enter] per actualitzar el sistema & instal·lar MySQL !Aquest pas pot tarda una Mica¡"
@@ -26,12 +33,7 @@ then
 		read -p "Clica [Enter] per torna al Menu"
 		clear
 		./Mysql-PhpmyadminInstall.sh
-	else
-		clear
-		echo "MySQL ja esta instal·lat al sistema"
-		read -p "Clica [Enter] per torna al Menu"
-		clear
-		./Mysql-PhpmyadminInstall.sh
+	
 	fi
 
 elif [ $a = 2 ]

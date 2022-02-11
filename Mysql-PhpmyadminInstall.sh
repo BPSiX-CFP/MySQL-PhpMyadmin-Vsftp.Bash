@@ -27,7 +27,7 @@ then
 		read -p "Clica [Enter] per actualitzar el sistema & instal·lar MySQL !Aquest pas pot tarda una Mica¡"
 
 		sudo apt-get update -y
-		sudo apt-get install mysql-server
+		sudo apt-get install mysql-server -y
 		clear
 
 		read -p "Clica [Enter] per torna al Menu"

@@ -3,12 +3,12 @@ Bash per poder instal·lar d'una forma més fàcil MySQL, PhpMyadmin i Vsftpd a 
 
 ## Com Utilitzar el Script
 Primer de tot descarreguem l'arxiu .sh amb la següent comanda i donem permisos d'execució:
-| Funció          | Comandes a escriure                                                     |
-| :-------------- | :---------------------------------------------------------------------- |
-| Install git     | `sudo apt-get install git -y`                                           |
-| Dowload Script  | `git clone https://github.com/BPSiX-CFP/MySQL-PhpMyadmin-Vsftp.Bash.git`|
-| Move Directory  | `cd MySQL-PhpMyadmin-Vsftp.Bash`                                        |
-| Execution Acces | `sudo chmod +x Mysql-PhpmyadminInstall.sh`                              |
-| Execute Script  | `sudo ./Mysql-PhpmyadminInstall.sh`                                     |
+| Funció           | Comandes a escriure                                                     |
+| :--------------  | :---------------------------------------------------------------------- |
+| Install git      | `sudo apt-get install git -y`                                           |
+| Dowload Script   | `git clone https://github.com/BPSiX-CFP/MySQL-PhpMyadmin-Vsftp.Bash.git`|
+| Move Directory   | `cd MySQL-PhpMyadmin-Vsftp.Bash`                                        |
+| Execution Access | `sudo chmod +x Mysql-PhpmyadminInstall.sh`                              |
+| Execute Script   | `sudo ./Mysql-PhpmyadminInstall.sh`                                     |
 
 @DonBosco :+1: This Script looks great - it's ready to merge! :shipit:

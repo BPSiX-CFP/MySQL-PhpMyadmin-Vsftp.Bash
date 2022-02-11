@@ -123,16 +123,10 @@ then
 elif [ $a = 5 ]
 then
 
-	sudo systemctl status mysql
-	if [ $? -eq 4 ]
+	Ruta=/etc/mysql
+	
+	if [ -d $Ruta ]
 	then
-		clear
-		echo "No esta instal·lat MySQL!"
-		read -p "Clica [Enter] per torna al Menu"
-		clear
-		./Mysql-PhpmyadminInstall.sh
-
-	else
 		clear
 		echo -e "Escriu el nom del usuari sisplau"
 		read nom
@@ -150,6 +144,15 @@ then
 		read -p "Clica [Enter] per torna al Menu"
 		clear
 		./Mysql-PhpmyadminInstall.sh
+	else	
+	
+		clear
+		echo "No esta instal·lat MySQL!"
+		read -p "Clica [Enter] per torna al Menu"
+		clear
+		./Mysql-PhpmyadminInstall.sh
+
+	
 	fi
 
 

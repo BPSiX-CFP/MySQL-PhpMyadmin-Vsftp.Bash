@@ -136,9 +136,9 @@ then
 
 		echo "Usuari Creat amb el Nom-> '${nom}' i la Contrasenya-> '${password}';"
 
-		mysql -e "CREATE USER '${nom}'@'%' IDENTIFIED BY '${password}';"
+		sudo mysql -e "CREATE USER '${nom}'@'%' IDENTIFIED BY '${password}';"
 
-		mysql -e "GRANT ALL PRIVILEGES ON *.* TO '${nom}'@'%' WITH GRANT OPTION;"
+		sudo mysql -e "GRANT ALL PRIVILEGES ON *.* TO '${nom}'@'%' WITH GRANT OPTION;"
 
 		echo "Usuari creat correctament i privilegis donats!"
 		read -p "Clica [Enter] per torna al Menu"
@@ -167,27 +167,24 @@ then
 
 	clear
 
-	mysql -u ${user} -p${pass}
+	sudo mysql -u ${user} -p${pass}
 
 
 elif [ $a = 7 ]
 then
 	clear
-	mysql -e "SELECT User,Host FROM mysql.user;"
+	suod mysql -e "SELECT User,Host FROM mysql.user;"
 	read -p "Clica [Enter] per torna al Menu"
 	clear
 	./Mysql-PhpmyadminInstall.sh
 
 elif [ $a = 8 ]
 then
-
 	read -p  "Clica [Enter] per sortir del Script! Gracies per utilitzar el Script!"
 	clear
 	exit
-
-
 else
-	echo "Sisplau escrigui una de les opcions!!!"
+	echo "Sisplau escrigui una de les opcions del Menu!!!"
 	read -p "Clica [Enter] per torna al Menu"
 	./Mysql-PhpmyadminInstall.sh
 fi

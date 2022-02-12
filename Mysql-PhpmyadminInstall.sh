@@ -1,11 +1,8 @@
 #!/bin/bash
 
 clear
-
 echo -e "Benvinguts al Instal·lable de MySQL + PhpMyAdmin + VsFtp i creació d'un Usuari SQL Grant Privileges!"
-
 echo -e "\n 1. Instal·lar MySQL \n 2. Instal·lar Apache2 \n 3. Instal·lar Phpmyadmin \n 4. Instal·lar VsFtp \n 5. Crear Usuari SQL \n 6. Connectar a Base de Dades \n 7. Llistar usuaris de MySQL \n 8. Sortir"
-
 read a
 
 clear
@@ -24,12 +21,13 @@ then
 	else 
 		clear
 		echo "No esta Instal·lat MySQL"
-		read -p "Clica [Enter] per actualitzar el sistema & instal·lar MySQL !Aquest pas pot tarda una Mica¡"
-
+		read -p "Clica [Enter] per actualitzar el sistema & instal·lar MySQL !Aquest pas pot tarda una mica¡"
+		
 		sudo apt-get update -y
 		sudo apt-get install mysql-server -y
 		clear
-
+		
+		echo "MySQL ja esta Instal·lat al sistema"
 		read -p "Clica [Enter] per torna al Menu"
 		clear
 		./Mysql-PhpmyadminInstall.sh
@@ -173,7 +171,7 @@ then
 elif [ $a = 7 ]
 then
 	clear
-	suod mysql -e "SELECT User,Host FROM mysql.user;"
+	sudo mysql -e "SELECT User,Host FROM mysql.user;"
 	read -p "Clica [Enter] per torna al Menu"
 	clear
 	./Mysql-PhpmyadminInstall.sh

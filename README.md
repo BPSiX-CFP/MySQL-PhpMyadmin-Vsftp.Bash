@@ -8,7 +8,7 @@ Primer de tot descarreguem l'arxiu .sh amb la següent comanda i donem permisos 
 | Install git      | `sudo apt-get install git -y`                                           |
 | Dowload Script   | `git clone https://github.com/BPSiX-CFP/MySQL-PhpMyadmin-Vsftp.Bash.git`|
 | Move Directory   | `cd MySQL-PhpMyadmin-Vsftp.Bash`                                        |
-| Execution Access | `sudo chmod +x Mysql-PhpmyadminInstall.sh`                              |
+| Execution Access | `sudo chmod u+x Mysql-PhpmyadminInstall.sh`                              |
 | Execute Script   | `sudo ./Mysql-PhpmyadminInstall.sh`                                     |
 
 @DonBosco :+1: This Script looks great - it's ready to merge! :shipit:

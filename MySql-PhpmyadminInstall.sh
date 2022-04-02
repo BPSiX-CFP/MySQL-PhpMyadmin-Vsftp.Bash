@@ -2,6 +2,8 @@
 
 echo -e "Benvingut, aquest programa ha estat creat per Joan Don Bosco\n"
 
+echo -e "Selecciona una de les opcions escrivint el seu número si us plau!!!\n"
+
 select opt in "1.Instal·lar MySQL" "2.Instal·lar Apache2" "3.Instal·lar Phpmyadmin" "4.Instal·lar Vsftp" "5.Crear un Usuari SQL" "6.Connectar a MySQL" "7.Llistar usuaris de MySQL" "8.Sortir"
 
 do
@@ -13,21 +15,21 @@ do
 	    if [ -d $Ruta ]
 	    then
 		    clear
-	    	echo "MySQL ja esta instal·lat al sistema"
-		    read -p "Clica [Enter] per torna al Menu"
+	    	    echo "MySQL ja està instal·lat al sistema"
+		    read -p "Clica [Enter] per torna al Menú"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    else 
 		    clear
-		    echo "No esta Instal·lat MySQL"
-		    read -p "Clica [Enter] per actualitzar el sistema & instal·lar MySQL !Aquest pas pot tarda una mica¡"
+		    echo "No està Instal·lat MySQL"
+		    read -p "Clica [Enter] per actualitzar el sistema & instal·lar MySQL !Aquest pas pot tardar una mica¡"
 		
 		    sudo apt-get update -y
 		    sudo apt-get install mysql-server -y
 		    clear
 		
-		    echo "MySQL ja esta Instal·lat al sistema"
-		    read -p "Clica [Enter] per torna al Menu"
+		    echo "MySQL ja està Instal·lat al sistema"
+		    read -p "Clica [Enter] per torna al Menú"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    fi
@@ -39,13 +41,13 @@ do
 
 	    if [ -d $Ruta ]
 	    then
-		    echo "Apache2 ja esta instal·lat al sistema"
-		    read -p "Clica [Enter] per torna al Menu"
+		    echo "Apache2 ja está instal·lat al sistema"
+		    read -p "Clica [Enter] per torna al Menú"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    else
 		    clear
-		    echo "No esta Instal·lat Apache!"
+		    echo "No está Instal·lat Apache!"
 		    read -p "Clica [Enter] per actualitzar el sistema & instal·lar Apache2"
 
 		    sudo apt-get update -y
@@ -53,7 +55,7 @@ do
 		    clear
 
 		    echo "Apache2 instal·lat!"
-		    read -p "Clica [Enter] per torna al Menu"
+		    read -p "Clica [Enter] per torna al Menú"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    fi
@@ -65,7 +67,7 @@ do
 
 	    if [ -d "$Ruta" ]
 	    then
-		    echo "Phpmyadmin ja esta Instal·lat al sistema"
+		    echo "Phpmyadmin ja està Instal·lat al sistema"
 		    read -p "Clica [Enter] per torna al Menu"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
@@ -79,8 +81,8 @@ do
 
 		    clear
 
-		    echo "Phpmyadmin ja esta Instal·lat al sistema"
-		    read -p "Clica [Enter] per torna al Menu"
+		    echo "Phpmyadmin ja està Instal·lat al sistema"
+		    read -p "Clica [Enter] per torna al Menú"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    fi
@@ -93,21 +95,21 @@ do
       if [ $? -eq 4 ]
 	    then
 		    clear
-		    echo "Vsftp no es Instal·lat al sistema"
+		    echo "Vsftp no està Instal·lat al sistema"
 		    read -p "Clica [Enter] per actualitzar el sistema & instal·lar Vsftp"
 
 		    sudo apt-get update -y
 		    sudo apt-get install vsftpd -y
 		    clear
 
-		    echo "Vsftp ja esta Instal·latal sistema"
-		    read -p "Clica [Enter] per torna al Menu"
+		    echo "Vsftp ja està Instal·latal sistema"
+		    read -p "Clica [Enter] per torna al Menú"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    else
 		    clear
-		    echo "Vsftp ja esta Instal·lat al sistema!!!"
-		    read -p "Clica [Enter] per torna al Menu"
+		    echo "Vsftp ja està Instal·lat al sistema!!!"
+		    read -p "Clica [Enter] per torna al Menú"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    fi
@@ -120,10 +122,10 @@ do
     	if [ -d $Ruta ]
 	    then
 		    clear
-		    echo -e "Escriu el nom del usuari sisplau"
+		    echo -e "Escriu el nom de l'usuari si us plau"
 		    read nom
 
-		    echo -e "Escriu la contrasenya per el usuari sisplau"
+		    echo -e "Escriu la contrasenya per l'usuari si us plau"
 		    read password
 
 		    echo "Usuari Creat amb el Nom-> '${nom}' i la Contrasenya-> '${password}';"
@@ -132,14 +134,14 @@ do
         sudo mysql -e "GRANT ALL PRIVILEGES ON *.* TO '${nom}'@'%' WITH GRANT OPTION;"
 
 		    echo "Usuari creat correctament i privilegis donats!"
-		    read -p "Clica [Enter] per torna al Menu"
+		    read -p "Clica [Enter] per torna al Menú"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    else	
 	
 		    clear
-		    echo "No esta instal·lat MySQL!"
-		    read -p "Clica [Enter] per torna al Menu"
+		    echo "No està instal·lat MySQL!"
+		    read -p "Clica [Enter] per torna al Menú"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    fi
@@ -148,10 +150,10 @@ do
      "6.Connectar a MySQL")
       
       clear
-	    echo -e "Escriu el usuari amb el que et vols connectar a la BD: "
+	    echo -e "Escriu l'usuari amb el qual et vols connectar a la BD: "
 	    read user
 
-	    echo -e "Escriu la contrasenya del usuari sisplau: "
+	    echo -e "Escriu la contrasenya de l'usuari si us plau: "
 	    read pass
 
 	    clear
@@ -171,7 +173,7 @@ do
       ;;
      
      "8.Sortir")
-        read -p  "Clica [Enter] per sortir del Script! Gracies per utilitzar el Script!"
+        read -p  "Clica [Enter] per sortir del Script! Gràcies per utilitzar el Script!"
 	      clear
 	      exit
      ;;

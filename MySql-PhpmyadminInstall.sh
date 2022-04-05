@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 echo -e "Benvingut, aquest programa ha estat creat per Joan Don Bosco\n"
 
 echo -e "Selecciona una de les opcions escrivint el seu número si us plau!!!\n"

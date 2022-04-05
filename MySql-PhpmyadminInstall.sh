@@ -43,6 +43,7 @@ do
 
 	    if [ -d $Ruta ]
 	    then
+	    	    clear
 		    echo "Apache2 ja está instal·lat al sistema"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
@@ -69,11 +70,13 @@ do
 
 	    if [ -d "$Ruta" ]
 	    then
+	    	    clear
 		    echo "Phpmyadmin ja està Instal·lat al sistema"
 		    read -p "Clica [Enter] per torna al Menu"
 		    clear
 		    ./Mysql-PhpmyadminInstall.sh
 	    else
+	    	    clear
 		    echo "Phpmyadmin no es Instal·lat al sistema"
 		    read -p "Clica [Enter] per actualitzar el sistema & instal·lar Phpmyadmin"
 
@@ -151,7 +154,7 @@ do
 
      "6.Connectar a MySQL")
       
-      clear
+            clear
 	    echo -e "Escriu l'usuari amb el qual et vols connectar a la BD: "
 	    read user
 
@@ -175,7 +178,8 @@ do
       ;;
      
      "8.Sortir")
-        read -p  "Clica [Enter] per sortir del Script! Gràcies per utilitzar el Script!"
+              clear
+	      read -p  "Clica [Enter] per sortir del Script! Gràcies per utilitzar el Script!"
 	      clear
 	      exit
      ;;

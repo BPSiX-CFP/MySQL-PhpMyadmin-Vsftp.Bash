@@ -12,7 +12,7 @@ do
   case $opt in 
     "1.Instal·lar MySQL")
         
-      Ruta=/etc/mysql
+      	Ruta=/etc/mysql
 	
 	    if [ -d $Ruta ]
 	    then
@@ -20,7 +20,7 @@ do
 	    	    echo "MySQL ja està instal·lat al sistema"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    else 
 		    clear
 		    echo "No està Instal·lat MySQL"
@@ -33,13 +33,13 @@ do
 		    echo "MySQL ja està Instal·lat al sistema"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    fi
         ;;
 
     "2.Instal·lar Apache2")
         
-      Ruta=/etc/apache2
+      	Ruta=/etc/apache2
 
 	    if [ -d $Ruta ]
 	    then
@@ -47,7 +47,7 @@ do
 		    echo "Apache2 ja está instal·lat al sistema"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    else
 		    clear
 		    echo "No está Instal·lat Apache!"
@@ -60,13 +60,13 @@ do
 		    echo "Apache2 instal·lat!"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    fi
       ;;
 
     "3.Instal·lar Phpmyadmin")
      
-      Ruta=/usr/share/phpmyadmin
+      	Ruta=/usr/share/phpmyadmin
 
 	    if [ -d "$Ruta" ]
 	    then
@@ -74,7 +74,7 @@ do
 		    echo "Phpmyadmin ja està Instal·lat al sistema"
 		    read -p "Clica [Enter] per torna al Menu"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    else
 	    	    clear
 		    echo "Phpmyadmin no es Instal·lat al sistema"
@@ -89,7 +89,7 @@ do
 		    echo "Phpmyadmin ja està Instal·lat al sistema"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    fi
       ;;
 
@@ -110,19 +110,19 @@ do
 		    echo "Vsftp ja està Instal·latal sistema"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    else
 		    clear
 		    echo "Vsftp ja està Instal·lat al sistema!!!"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    fi
       ;;
 
      "5.Crear un Usuari SQL")
       
-      Ruta=/etc/mysql
+      	Ruta=/etc/mysql
 	
     	if [ -d $Ruta ]
 	    then
@@ -141,20 +141,20 @@ do
 		    echo "Usuari creat correctament i privilegis donats!"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    else	
 	
 		    clear
 		    echo "No està instal·lat MySQL!"
 		    read -p "Clica [Enter] per torna al Menú"
 		    clear
-		    ./Mysql-PhpmyadminInstall.sh
+		    ./MySql-PhpmyadminInstall.sh
 	    fi
       ;;
 
      "6.Connectar a MySQL")
       
-            clear
+        clear
 	    echo -e "Escriu l'usuari amb el qual et vols connectar a la BD: "
 	    read user
 
@@ -174,14 +174,15 @@ do
 	      read -p "Clica [Enter] per torna al Menu"
 	
         clear
-	      ./Mysql-PhpmyadminInstall.sh
+	      ./MySql-PhpmyadminInstall.sh
       ;;
      
      "8.Sortir")
-              clear
+
+        clear
 	      read -p  "Clica [Enter] per sortir del Script! Gràcies per utilitzar el Script!"
 	      clear
-	      exit
+	    exit
      ;;
   esac
 done

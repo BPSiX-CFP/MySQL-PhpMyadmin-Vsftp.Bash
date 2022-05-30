@@ -181,13 +181,13 @@ do
             clear
             read -p  "Clica [Enter] per sortir del Script! Gràcies per utilitzar el Script!"
             clear
-            exit
+            break;
         ;;
         *)
             clear
             read -p "Seleciona una de les opcions Si us plau!"
             clear
-            break
+            ./MySql-PhpmyadminInstall.sh
        ;;
     esac
 done

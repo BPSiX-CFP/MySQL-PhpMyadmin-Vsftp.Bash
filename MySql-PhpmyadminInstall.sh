@@ -180,12 +180,11 @@ do
         "8.Sortir")
             clear
             read -p  "Clica [Enter] per sortir del Script! Gràcies per utilitzar el Script!"
-            clear
-            break;
+            break
         ;;
         *)
             clear
-            read -p "Seleciona una de les opcions Si us plau!"
+            read -p "Seleccionà una de les opcions si us plau!"
             clear
             ./MySql-PhpmyadminInstall.sh
        ;;

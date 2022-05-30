@@ -8,7 +8,8 @@ echo -e "Selecciona una de les opcions escrivint el seu número si us plau!!!\n"
 
 select opt in "1.Instal·lar MySQL" "2.Instal·lar Apache2" "3.Instal·lar Phpmyadmin" "4.Instal·lar Vsftp" "5.Crear un Usuari SQL" "6.Connectar a MySQL" "7.Llistar usuaris de MySQL" "8.Sortir"
 
-while : ; do
+do 
+{
     case $opt in
         "1.Instal·lar MySQL")
             
@@ -20,6 +21,7 @@ while : ; do
                 echo "MySQL ja està instal·lat al sistema"
                 read -p "Clica [Enter] per torna al Menú"
                 clear
+                break
             else
                 clear
                 echo "No està Instal·lat MySQL"
@@ -32,6 +34,7 @@ while : ; do
                 echo "MySQL ja està Instal·lat al sistema"
                 read -p "Clica [Enter] per torna al Menú"
                 clear
+                break
             fi
         ;;
         
@@ -45,6 +48,7 @@ while : ; do
                 echo "Apache2 ja está instal·lat al sistema"
                 read -p "Clica [Enter] per torna al Menú"
                 clear
+                break
             else
                 clear
                 echo "No está Instal·lat Apache!"
@@ -57,6 +61,7 @@ while : ; do
                 echo "Apache2 instal·lat!"
                 read -p "Clica [Enter] per torna al Menú"
                 clear
+                break
             fi
         ;;
         
@@ -70,6 +75,7 @@ while : ; do
                 echo "Phpmyadmin ja està Instal·lat al sistema"
                 read -p "Clica [Enter] per torna al Menu"
                 clear
+                break
             else
                 clear
                 echo "Phpmyadmin no es Instal·lat al sistema"
@@ -84,6 +90,7 @@ while : ; do
                 echo "Phpmyadmin ja està Instal·lat al sistema"
                 read -p "Clica [Enter] per torna al Menú"
                 clear
+                break
             fi
         ;;
         
@@ -104,11 +111,13 @@ while : ; do
                 echo "Vsftp ja està Instal·latal sistema"
                 read -p "Clica [Enter] per torna al Menú"
                 clear
+                break
             else
                 clear
                 echo "Vsftp ja està Instal·lat al sistema!!!"
                 read -p "Clica [Enter] per torna al Menú"
                 clear
+                break
             fi
         ;;
         
@@ -133,12 +142,14 @@ while : ; do
                 echo "Usuari creat correctament i privilegis donats!"
                 read -p "Clica [Enter] per torna al Menú"
                 clear
+                break
             else
                 
                 clear
                 echo "No està instal·lat MySQL!"
                 read -p "Clica [Enter] per torna al Menú"
                 clear  
+                break
             fi
         ;;
         
@@ -163,6 +174,7 @@ while : ; do
             sudo mysql -e "SELECT User,Host FROM mysql.user;"
             read -p "Clica [Enter] per torna al Menu"
             clear
+            break
       
         ;;
         
@@ -171,5 +183,11 @@ while : ; do
             read -p  "Clica [Enter] per sortir del Script! Gràcies per utilitzar el Script!"
             exit
         ;;
+        
+        *)
+          clear
+          read -p "Escriu una de les opcions Tontito!!!!"
+          break
+       ;;
     esac
-done
+} while ($opt != 8)
